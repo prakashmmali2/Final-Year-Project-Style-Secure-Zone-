@@ -1,0 +1,232 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000; /* black background */
+    color: #f1f1f1; /* light text for readability */
+    overflow-x: hidden;
+}
+
+/* Top Banner */
+.top-banner {
+    background: #000; /* solid black banner */
+    color: #ffeb3b; /* yellow text */
+    text-align: center;
+    padding: 15px 20px;
+    font-weight: 700;
+    font-size: 1.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 3px solid #ffeb3b; /* yellow border */
+    box-shadow: 0 5px 20px rgba(255,235,59,0.2);
+}
+
+.top-banner i {
+    font-size: 1.6em;
+    color: #ffeb3b;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 35px;
+    padding: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.box {
+    background: #f9f9f9; /* light background instead of black */
+    color: #111; /* dark text for readability */
+    border-radius: 20px;
+    padding: 30px;
+    flex: 1 1 380px;
+    min-width: 320px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(255, 235, 59, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+/* Camera Section */
+.person-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.15) inset;
+    height: 450px;
+    background-color: #222;
+}
+
+#video, #capturedImage {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Buttons - Black & Yellow */
+button {
+    padding: 12px 28px;
+    color: #ffeb3b;
+    font-weight: 600;
+    border: 2px solid #ffeb3b;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: #000;
+    box-shadow: 0 4px 10px rgba(255, 235, 59, 0.2);
+    text-shadow: none;
+}
+
+button:hover {
+    background: #ffeb3b;
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(255, 235, 59, 0.4);
+}
+
+/* Shirt Image Container */
+#shirtImageContainer img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(255, 235, 59, 0.2);
+}
+
+/* Person Wearing Shirt */
+#wearShirtContainer {
+    background-color: #f9f9f9; /* light gray so shirts stand out */
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.2) inset;
+}
+
+/* Sign-in Container */
+.signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 40px 20px;
+}
+
+.signin-box {
+    background: #111;
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    color: #f1f1f1;
+    box-shadow: 0 4px 12px rgba(255, 235, 59, 0.15);
+}
+
+.signin-box h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #ffeb3b;
+    font-size: 2em;
+    text-shadow: none;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffeb3b;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #ffeb3b;
+    border-radius: 12px;
+    background: #000;
+    color: #f1f1f1;
+    font-size: 1em;
+    transition: all 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #ffd700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    background: #111;
+}
+
+.form-group input::placeholder {
+    color: #888;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #shirtForm label, 
+    #shirtForm input, 
+    #shirtForm button {
+        width: 100%;
+    }
+
+    #captureButton {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin: 15px auto;
+        display: block;
+        width: 80%;
+        max-width: 200px;
+    }
+
+    #captureButton:hover {
+        transform: scale(1.1);
+    }
+
+    .signin-box {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+
+    .signin-box h2 {
+        font-size: 1.8em;
+    }
+}
+
+/* Logout button (still neon style) */
+.logout-btn {
+    margin-left: auto;
+    padding: 8px 6px;
+    background: linear-gradient(45deg, #ce1e07, #eb1010);
+    border: none;
+    border-radius: 5px;
+    color: #120101;
+    font-weight: 6000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: none;
+}   
+.logout-btn.show {
+    display: inline-block;
+}
+.logout-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff4b2b, 0 0 40px #ff416c;
+}

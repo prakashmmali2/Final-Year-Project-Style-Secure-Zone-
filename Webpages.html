@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Changing Room</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose@0.4/pose.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+</head>
+<body>
+
+    <div class="top-banner">
+    <i class="fa-solid fa-shop"></i> 
+    <span>Welcome to the E-Changing Room </span>
+    <button id="logoutButton" class="logout-btn">Logout</button>
+</div>
+
+
+    <div class="container">
+        <!-- First Box: Capture Photo -->
+        <div class="box" id="personBox">
+            <h2>Capture Your Photo</h2>
+            <div class="person-container">
+                <video id="video" autoplay></video>
+                <canvas id="canvas" style="display:none;"></canvas>
+                <img id="capturedImage" alt="Captured Photo" style="display:none;"/>
+                
+            </div>
+            <button id="captureButton">Capture Photo</button>
+        </div>
+
+        <!-- Second Box: Shirt Input & Preview -->
+        <div class="box" id="shirtBox">
+            <h2>Select a Shirt</h2>
+            <form id="shirtForm">
+                <label for="shirtCode">Enter Shirt Code:</label>
+                <input type="text" id="shirtCode" name="shirtCode" placeholder="e.g., S123" required>
+                <button type="submit">Show Cloth</button>
+            </form>
+            <div id="shirtImageContainer"></div>
+            <button id="wearShirtButton">Wear Shirt</button>
+        </div>
+
+        <!-- Third Box: Wearing Shirt -->
+        <div class="box" id="wearShirtBox">
+            <h2>Try the Shirt</h2>
+            <div class="person-container" id="wearShirtContainer"></div>
+        </div>
+    </div>
+
+    <script src="back.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
