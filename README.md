@@ -62,8 +62,8 @@ cd frontend && npm install && npm start
 | Metric | Value |
 |--------|-------|
 | Inference Time | 0.8-1.2 sec |
-| Accuracy | 96.2% |
-| User Rating | 4.6/5.0 |
+| Accuracy | 89.2% |
+| User Rating | 3.9/5.0 |
 
 ---
 
@@ -76,12 +76,12 @@ cd frontend && npm install && npm start
 ---
 
 ## 👥 Team = #TheBoys
-**- Prakash Mali
+- Prakash Mali
 - Krishna Gutte
 - Khushal Shivade
-- Sanyam Jain**
+- Sanyam Jain
 
-**Project Lead**: [Your Name] | **Supervisor**: Prof. [Name] | **College**: [College Name]
+**Project Lead**: Prakash Mali | **Supervisor**: Prof. Ms. Ankita Gandhi and Prof. Mr. Amit Kumar | **College**: Parul University
 
 ---
 
